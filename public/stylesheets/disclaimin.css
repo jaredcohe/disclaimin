@@ -1,5 +1,5 @@
 body {
-  background-color: #C2A7F2;
+  background-color: #929CB0;
   font-family: sans-serif;
 }
 h1 {
@@ -11,5 +11,10 @@ h2 {
   font-size: 1.2em;
 }
 h2, p {
-  margin-left: 120px;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+p.tiny {
+  font-size: 12px;
 }
