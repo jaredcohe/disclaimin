@@ -12,5 +12,51 @@
       And, this may be one of those times.
     </p>
     <p class='tiny'>- Disclaim.in<p>
+      
+      <a href="javascript:
+      alert('hello');
+      console.log('hello');
+      function searchAndHighlight() {
+      var searchArray = ['food','the'];
+      var bodyText = document.body.innerHTML;
+      for (var i = 0; i < searchArray.length; i++) 
+        {
+          var searchTerm = searchArray[i];
+          var highlightStartTag = &quot;<font style='color:blue; background-color:yellow;'>&quot;;
+          var highlightEndTag = '</font>';
+          var newText = '';
+          var j = -1;
+          var lcSearchTerm = searchTerm.toLowerCase();
+          var lcBodyText = bodyText.toLowerCase();
+          while (bodyText.length > 0) 
+            {
+            j = lcBodyText.indexOf(lcSearchTerm, j+1);
+            if (j < 0)
+              {
+                newText += bodyText;
+                bodyText = '';
+              } else
+              {
+                if (bodyText.lastIndexOf('>', j) >= bodyText.lastIndexOf('<', j))
+                  {
+                    //if (lcBodyText.lastIndexOf('/script>', j) >= lcBodyText.lastIndexOf('<script', j))
+                      {
+                        newText += bodyText.substring(0, j) + highlightStartTag + bodyText.substr(j, searchTerm.length) + highlightEndTag;
+                        bodyText = bodyText.substr(j + searchTerm.length);
+                        lcBodyText = bodyText.toLowerCase();
+                        j = -1;
+                      }
+                  }
+              }
+            }
+          bodyText = newText;
+        }
+        alert('hihi');
+        console.log(bodyText);
+        document.body.innerHTML = bodyText;
+      }
+      searchAndHighlight();
+      void(0)
+      ">Jared's Bookmarklet</a>
   </body>
 </html>
