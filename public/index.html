@@ -14,8 +14,7 @@
     <p class='tiny'>- Disclaim.in<p>
       
       <a href="javascript:
-      alert('hello');
-      console.log('hello');
+      console.log('bookmarklet running');
       function searchAndHighlight() {
       var searchArray = ['food','the'];
       var bodyText = document.body.innerHTML;
@@ -50,8 +49,7 @@
             }
           bodyText = newText;
         }
-        alert('hihi');
-        console.log(bodyText);
+        console.log('bookmarklet ran');
         document.body.innerHTML = bodyText;
       }
       searchAndHighlight();
