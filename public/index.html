@@ -39,7 +39,6 @@
               {
                 if (bodyText.lastIndexOf('>', j) >= bodyText.lastIndexOf('<', j))
                   {
-                    //if (lcBodyText.lastIndexOf('/script>', j) >= lcBodyText.lastIndexOf('<script', j))
                       {
                         newText += bodyText.substring(0, j) + highlightStartTag + bodyText.substr(j, searchTerm.length) + highlightEndTag;
                         bodyText = bodyText.substr(j + searchTerm.length);
@@ -57,6 +56,6 @@
       }
       searchAndHighlight();
       void(0)
-      ">Jared's Bookmarklet</a>
+      ">Jared Bookmarklet</a>
   </body>
 </html>
