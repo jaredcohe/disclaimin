@@ -16,7 +16,7 @@
       <a href="javascript:
       console.log('bookmarklet running');
       function searchAndHighlight() {
-      var searchArray = ['food','the'];
+      var searchArray = ['proceeds','charity','charities','%','discount','coupon','sweepstakes','raffle','drawing','percentage','win','opportunity to win','Krochet Kids','empower','marginalize','At risk','at-risk','Homeless','scholarship','AIDS','HIV','cancer','minecraft server','social network','NGO','clinic','Guidelines','contest','competition','knife','gun','weapon','energy drink','health','nutrition','property','beer','wine','alcohol','self-help','SEO','advertising','advertisement','startup','nonprofit','non-profit'];
       var bodyText = document.body.innerHTML;
       for (var i = 0; i < searchArray.length; i++) 
         {
@@ -38,7 +38,8 @@
               {
                 if (bodyText.lastIndexOf('>', j) >= bodyText.lastIndexOf('<', j))
                   {
-                      {
+                    if (lcBodyText.lastIndexOf('<script', j) < lcBodyText.lastIndexOf('/script>', j))
+                    {
                         newText += bodyText.substring(0, j) + highlightStartTag + bodyText.substr(j, searchTerm.length) + highlightEndTag;
                         bodyText = bodyText.substr(j + searchTerm.length);
                         lcBodyText = bodyText.toLowerCase();
@@ -55,5 +56,13 @@
       searchAndHighlight();
       void(0)
       ">Jared Bookmarklet</a>
+      <br />
+      coupon
+      sdlkfj
+      %
+      klsjdf 
+      self-help
+      
+      
   </body>
 </html>
