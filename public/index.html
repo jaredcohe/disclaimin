@@ -13,45 +13,5 @@
     </p>
     <p class='tiny'>- Disclaim.in<p>
     <br />
-    <a href="javascript:
-    function searchAndHighlight() {
-    var searchArray = ['project','proceed','charity','charities','discount','coupon','sweepstakes','raffle','drawing','percentage','win','opportunity to win','Krochet Kids','empower','marginalize','At risk','at-risk','Homeless','scholarship','AIDS','HIV','cancer','minecraft server','social network','NGO','clinic','Guidelines','contest','competition','knife','gun','weapon','energy drink','health','nutrition','property','beer','wine','alcohol','self-help','SEO','advertising','advertisement','startup','nonprofit','non-profit'];
-    var bodyText = document.body.innerHTML;
-    for (var i = 0; i < searchArray.length; i++) 
-      {
-        var searchTerm = searchArray[i];
-        var highlightStartTag = &quot;<font style='color:blue; background-color:yellow;'>&quot;;
-        var highlightEndTag = '</font>';
-        var newText = '';
-        var j = -1;
-        var lcSearchTerm = searchTerm.toLowerCase();
-        var lcBodyText = bodyText.toLowerCase();
-        while (bodyText.length > 0) 
-          {
-          j = lcBodyText.indexOf(lcSearchTerm, j+1);
-          if (j < 0)
-            {
-              newText += bodyText;
-              bodyText = '';
-            } else
-            {
-              if (bodyText.lastIndexOf('>', j) >= bodyText.lastIndexOf('<', j))
-                {
-                  if (lcBodyText.lastIndexOf('<script', j) < lcBodyText.lastIndexOf('/script>', j))
-                   {
-                      newText += bodyText.substring(0, j) + highlightStartTag + bodyText.substr(j, searchTerm.length) + highlightEndTag;
-                      bodyText = bodyText.substr(j + searchTerm.length);
-                      lcBodyText = bodyText.toLowerCase();
-                      j = -1;
-                    }
-                }
-            }
-          }
-        bodyText = newText;
-      }
-      document.body.innerHTML = bodyText;
-    }
-    searchAndHighlight();
-    ">bookmarklet</a>
   </body>
 </html>
